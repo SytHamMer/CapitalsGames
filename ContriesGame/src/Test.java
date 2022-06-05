@@ -2,10 +2,11 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Test {
     
-    ArrayList<String> countries = new ArrayList<>(Arrays.asList(
+    public static ArrayList<String> countries = new ArrayList<>(Arrays.asList(
    "Afghanistan",
    "Afrique du Sud",
    "Albanie",
@@ -38,17 +39,19 @@ public class Test {
    "Bulgarie",
    "Burkina Faso",
    "Burundi",
-   "Bujumbura",
    "Cambodge",
    "Cameroun",
    "Canada",
    "Cap-Vert",
+   "République Centrafricaine",
    "Chili",
    "Chine",
    "Chypre",
    "Colombie",
    "Comores",
-   "Congo",
+   "République du Congo",
+   "République Démocratique du Congo",
+   "Îles Cook",
    "Corée du Nord",
    "Corée du Sud",
    "Costa Rica",
@@ -56,6 +59,7 @@ public class Test {
    "Croatie",
    "Cuba",
    "Danemark",
+   "République Dominicaine",
    "Djibouti",
    "Dominique",
    "Egypte",
@@ -84,7 +88,6 @@ public class Test {
    "Haïti",
    "Honduras",
    "Hongrie",
-   "Île Maurice",
    "Inde",
    "Indonésie",
    "Irak",
@@ -100,7 +103,6 @@ public class Test {
    "Kenya",
    "Kirghizistan",
    "Kiribati",
-   "Kosovo",
    "Koweït",
    "Laos",
    "Lesotho",
@@ -120,6 +122,7 @@ public class Test {
    "Malte",
    "Maroc",
    "Marshall",
+   "Île Maurice",
    "Mauritanie",
    "Mexique",
    "Micronésie",
@@ -151,15 +154,11 @@ public class Test {
    "Pologne",
    "Portugal",
    "Qatar",
-   "République Centrafricaine",
-   "République Démocratique du Congo",
-   "République Dominicaine",
-   "République Tchèque",
    "Roumanie",
    "Royaume-Uni",
    "Russie",
    "Rwanda",
-   "Saint-Kitts-et-Nevis",
+   "Saint-Christophe-et-Niévès",
    "Saint-Marin",
    "Saint-Vincent-et-les-Grenadines",
    "Sainte-Lucie",
@@ -183,9 +182,9 @@ public class Test {
    "Suriname",
    "Syrie",
    "Tadjikistan",
-   "Taïwan",
    "Tanzanie",
    "Tchad",
+   "République Tchèque",
    "Thaïlande",
    "Timor-Oriental",
    "Togo",
@@ -205,7 +204,7 @@ public class Test {
    "Zambie",
    "Zimbabwe"
     ));
-    ArrayList<String> capitales = new ArrayList<>(Arrays.asList( 
+    public static ArrayList<String> capitales = new ArrayList<>(Arrays.asList( 
     "Kaboul",
     "Bloemfontein/Le Cap/Pretoria",
     "Tirana",
@@ -361,6 +360,7 @@ public class Test {
     "Sain-Marin",
     "Kingstown",
     "Castries",
+    "Honiara",
     "San Salvador",
     "Apia",
     "São Tomé/Sao Tome/Sao Tomé",
@@ -402,8 +402,15 @@ public class Test {
     "Lusaka",
     "Harare"
     ));
+
+
+
     int choice;
     int nbquest;
+    static Random random = new Random();
+
+
+
     public Test(int i, int j){ // type de question ( 0 on donne le pays/ 1 on donne la capitale)
                                 // j = nombre de questions si all choisi alors rentrer 999
         this.choice = i;
@@ -416,7 +423,19 @@ public class Test {
 
     }
 
-    public 
+    public static int Random(){
+        return (random.nextInt(countries.size())-1);
+    }
+
+    public static String RandomChoice(ArrayList quest, int i){
+        String x;
+        x= (String)quest.get(i);
+        System.out.println(x);
+        System.out.println( i );
+        return x;
+    }
+
     //Pour pays à plusieurs choix séparer les choix par des / et le prendre en compte lors de la lecture de la réponse
     // Lire jusqu'à / et recommencer jusqu'à fin de la case i. 
 }
+

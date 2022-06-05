@@ -6,9 +6,10 @@ public class Windows extends JFrame {
 
 
 
-    public JCheckBox cap, coun,list,ten,twenty,fifty,hundred,all;
+    public JCheckBox cap, coun,list,ten,twenty,fifty,hundred,all,rules;
     public JPanel firstPage;
     public JLabel warning;
+    public Test test;
 
 
     public Windows(){
@@ -21,6 +22,8 @@ public class Windows extends JFrame {
         cap = new JCheckBox("Capital");
         coun = new JCheckBox("Country");
         list = new JCheckBox("List");
+        rules = new JCheckBox("Rules");        
+        games.add(rules);
         games.add(cap);
         games.add(coun);
         games.add(list);
@@ -50,18 +53,22 @@ public class Windows extends JFrame {
 
     }
 
-    public int WhichChoice(JCheckBox cap, JCheckBox coun, JCheckBox list, JLabel warning){
+    public int WhichChoice(JCheckBox cap, JCheckBox coun, JCheckBox list,JCheckBox rules, JLabel warning){
         int ans = 0;
-       if (cap.isSelected() && coun.isSelected() == false && list.isSelected() == false){
+       if (cap.isSelected() && coun.isSelected() == false && list.isSelected() == false && rules.isSelected() == false){
         ans = 1;
         warning.setText("");
        }
-       if (coun.isSelected()&& cap.isSelected() == false && list.isSelected() == false){
+       if (coun.isSelected()&& cap.isSelected() == false && list.isSelected() == false && rules.isSelected() == false){
         ans = 2;
         warning.setText("");
        }
-       if (list.isSelected()&& coun.isSelected() == false && cap.isSelected() == false){
+       if (list.isSelected()&& coun.isSelected() == false && cap.isSelected() == false && rules.isSelected() == false){
         ans = 3;
+        warning.setText("");
+       }
+       if (rules.isSelected()&& coun.isSelected() == false && cap.isSelected() == false && list.isSelected() == false){
+        ans = 4;
         warning.setText("");
        }
        if(ans == 0){
@@ -76,7 +83,10 @@ public class Windows extends JFrame {
         System.out.println("Hello, World!");
         Windows f = new Windows();
         f.setVisible(true);
-
+        int i = Test.Random();
+        System.out.println( i );
+        Test.RandomChoice(Test.countries,i);
+        Test.RandomChoice(Test.capitales,i);
 
 
     }

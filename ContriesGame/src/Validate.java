@@ -14,17 +14,20 @@ public class Validate  implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         System.out.println( "test" );
 
-        int a = f.WhichChoice(f.cap, f.coun, f.list, f.warning);
+        int a = f.WhichChoice(f.cap, f.coun, f.list,f.rules, f.warning);
         switch(a){
             case 1:
-            //Panel avec les questions qui sont les pays et réponses capitales
+            //Panel avec les questions qui sont les pays et réponses capitales PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
             break;
             case 2:
-            //Panel avec les questions qui sont les capitales et réponses pays
+            //Panel avec les questions qui sont les capitales et réponses pays  PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
             break;
             case 3:
             //Panel qui affiche la liste des pays et leurs capitales sur le côtés.
             break; 
+            case 4:
+            //Panel avec affichage des règles (accents espaces majuscules etc...)
+            //mais aussi quel mode correspond à quoi.
 
         }
 
