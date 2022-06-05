@@ -424,15 +424,54 @@ public class Test {
     }
 
     public static int Random(){
-        return (random.nextInt(countries.size())-1);
+        return (random.nextInt(countries.size()));
     }
 
     public static String RandomChoice(ArrayList quest, int i){
         String x;
         x= (String)quest.get(i);
-        System.out.println(x);
-        System.out.println( i );
+/*         System.out.println(x);
+        System.out.println( i ); */
         return x;
+    }
+
+    public static int series(ArrayList quest, ArrayList ans, int nbquest){
+        int score = 0;
+        Scanner scan = new Scanner(System.in); //La partie qui devra changer pour l'adaptation à l'interface
+        String userAns;
+        int cpt = 1;
+        do {
+
+                int r = Random();
+                String aff = RandomChoice(quest, r); // Question affichée
+                String answer = RandomChoice(ans , r); //La bonne réponse
+                System.out.println( aff );
+                userAns = scan.nextLine();
+                    if(userAns == answer){ // Comparer les String caractère par caractère avec comparaison de tailles et accents. 
+                        score = score +1;
+                        System.out.println( "c'est bon" );
+
+                    }
+                    else{
+                        score = score;
+                        System.out.println( "C'est pas bon" );
+
+                    }
+                    System.out.println( "Score: " + score );
+                    System.out.println( "Question : "  + cpt );
+                    System.out.println( "Bonne réponse :" + answer  +".");
+                    System.out.println( "/" + userAns +"/" );
+            cpt=cpt+1;
+
+        }
+        
+        
+        while(cpt <= nbquest) ;
+        System.out.println( "Finis" );
+        
+//Ajouter test pays pas déjà fait !  Pour ca, à chaque tour ajouter le pays fait dans une liste et comparer tous les éléments de cette liste au pays random donné
+//Si déjà présent alors faire un autre random sinon, poser la question et l'ajouter
+        return score;
     }
 
     //Pour pays à plusieurs choix séparer les choix par des / et le prendre en compte lors de la lecture de la réponse

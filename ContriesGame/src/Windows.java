@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class Windows extends JFrame {
 
@@ -9,7 +10,6 @@ public class Windows extends JFrame {
     public JCheckBox cap, coun,list,ten,twenty,fifty,hundred,all,rules;
     public JPanel firstPage;
     public JLabel warning;
-    public Test test;
 
 
     public Windows(){
@@ -84,10 +84,9 @@ public class Windows extends JFrame {
         Windows f = new Windows();
         f.setVisible(true);
         int i = Test.Random();
-        System.out.println( i );
-        Test.RandomChoice(Test.countries,i);
-        Test.RandomChoice(Test.capitales,i);
-
+/*         Test.RandomChoice(Test.countries,i);
+        Test.RandomChoice(Test.capitales,i); */
+        Test.series(Test.countries, Test.capitales, 5);
 
     }
 
