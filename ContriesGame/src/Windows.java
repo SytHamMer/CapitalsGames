@@ -6,6 +6,8 @@ public class Windows extends JFrame {
     public Windows(){
         setTitle("CapitalsGames");
         setSize(600,600);
+
+
         JMenuBar mb =  new JMenuBar();
         JMenu games = new JMenu("Games");
         games.add(new JCheckBox("Capital"));
@@ -19,9 +21,13 @@ public class Windows extends JFrame {
         questions.add(new JCheckBox("100"));
         questions.add(new JCheckBox("All"));
         mb.add(questions);
-
         this.setJMenuBar(mb);
+
+        JButton go = new JButton("Let's go !");
+        this.getContentPane().setLayout(new BorderLayout());
+        this.add(go,BorderLayout.SOUTH);
     }
+
 
 
     public static void main(String[] args) throws Exception {
