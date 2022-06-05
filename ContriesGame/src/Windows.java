@@ -3,6 +3,14 @@ import java.awt.*;
 
 public class Windows extends JFrame {
 
+
+
+
+    public JCheckBox cap, coun,list,ten,twenty,fifty,hundred,all;
+    public JPanel firstPage;
+    public JLabel warning;
+
+
     public Windows(){
         setTitle("CapitalsGames");
         setSize(600,600);
@@ -10,24 +18,58 @@ public class Windows extends JFrame {
 
         JMenuBar mb =  new JMenuBar();
         JMenu games = new JMenu("Games");
-        games.add(new JCheckBox("Capital"));
-        games.add(new JCheckBox("Country"));
-        games.add(new JCheckBox("List"));
+        cap = new JCheckBox("Capital");
+        coun = new JCheckBox("Country");
+        list = new JCheckBox("List");
+        games.add(cap);
+        games.add(coun);
+        games.add(list);
         mb.add(games);
         JMenu questions =   new JMenu("Questions");
-        questions.add(new JCheckBox("10"));
-        questions.add(new JCheckBox("20"));
-        questions.add(new JCheckBox("50"));
-        questions.add(new JCheckBox("100"));
-        questions.add(new JCheckBox("All"));
+        ten = new JCheckBox("10");
+        twenty = new JCheckBox("20");
+        fifty = new JCheckBox("50");
+        hundred = new JCheckBox("100");
+        all = new JCheckBox("All");
+        questions.add(ten);
+        questions.add(twenty);
+        questions.add(fifty);
+        questions.add(hundred);
+        questions.add(all);
         mb.add(questions);
         this.setJMenuBar(mb);
-
+        firstPage = new JPanel();
+        warning = new JLabel();
         JButton go = new JButton("Let's go !");
-        this.getContentPane().setLayout(new BorderLayout());
-        this.add(go,BorderLayout.SOUTH);
+        go.addActionListener(new Validate(this));
+
+        firstPage.setLayout(new BorderLayout());
+        firstPage.add(go, BorderLayout.SOUTH);
+        firstPage.add(warning, BorderLayout.CENTER);
+        this.add(firstPage);
+
     }
 
+    public int WhichChoice(JCheckBox cap, JCheckBox coun, JCheckBox list, JLabel warning){
+        int ans = 0;
+       if (cap.isSelected() && coun.isSelected() == false && list.isSelected() == false){
+        ans = 1;
+        warning.setText("");
+       }
+       if (coun.isSelected()&& cap.isSelected() == false && list.isSelected() == false){
+        ans = 2;
+        warning.setText("");
+       }
+       if (list.isSelected()&& coun.isSelected() == false && cap.isSelected() == false){
+        ans = 3;
+        warning.setText("");
+       }
+       if(ans == 0){
+          warning.setText("Veuillez selectionner qu'une seule case.");
+       }
+       System.out.println( ans );
+       return ans;
+    }
 
 
     public static void main(String[] args) throws Exception {
