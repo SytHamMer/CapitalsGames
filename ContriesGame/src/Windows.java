@@ -12,6 +12,8 @@ public class Windows extends JFrame {
     public JLabel warning;
 
 
+
+
     public Windows(){
         setTitle("CapitalsGames");
         setSize(600,600);
@@ -79,14 +81,15 @@ public class Windows extends JFrame {
     }
 
 
+
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
         Windows f = new Windows();
         f.setVisible(true);
-        int i = Test.Random();
-/*         Test.RandomChoice(Test.countries,i);
-        Test.RandomChoice(Test.capitales,i); */
-        Test.series(Test.countries, Test.capitales, 5);
+       /* int i = Test.Random();
+        Test.RandomChoice(Test.countries,i);
+        Test.RandomChoice(Test.capitales,i); 
+        Test.series(Test.countries, Test.capitales, 5);*/
 
     }
 
