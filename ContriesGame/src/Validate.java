@@ -21,7 +21,6 @@ public class Validate  implements ActionListener{
         System.out.println( "test" );
 
         int a = f.WhichChoice(f.cap, f.coun, f.list,f.rules, f.warning);
-        int nbquestVERIF = f.NumberQuestions(f.ten, f.twenty, f.fifty, f.hundred, f.all);
         switch(a){
             case 1:
             //#############################################Interface questions##################################################################
@@ -43,7 +42,7 @@ public class Validate  implements ActionListener{
             secondPage.add(center, BorderLayout.CENTER); //Amélioration possible sur la beauté du truc.
             secondPage.add(down, BorderLayout.SOUTH);
             f.add(secondPage);
-            System.out.println( nbquestVERIF );
+
             //####################################################################################################################################
             
             //Panel avec les questions qui sont les pays et réponses capitales PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
@@ -67,7 +66,6 @@ public class Validate  implements ActionListener{
             secondPage.add(center2, BorderLayout.CENTER); //Amélioration possible sur la beauté du truc.
             secondPage.add(down2, BorderLayout.SOUTH);
             f.add(secondPage);
-            System.out.println( nbquestVERIF );
             //Panel avec les questions qui sont les capitales et réponses pays  PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
             break;
             case 3:

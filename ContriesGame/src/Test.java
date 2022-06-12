@@ -435,34 +435,36 @@ public class Test {
         return x;
     }
 
-    public static int series(ArrayList quest, ArrayList ans, int nbquest){
+    public static int series(ArrayList quest, ArrayList ans, int nbquest){ //si renvoi 0 c'est que mauvaise sélection de questions. 
         int score = 0;
-        Scanner scan = new Scanner(System.in); //La partie qui devra changer pour l'adaptation à l'interface
-        String userAns;
         int cpt = 1;
+        ArrayList already = new ArrayList<String>();
+        boolean alreadyAsk = false;
+        if(nbquest == 0){
+            System.out.println( "Veuillez reconfigurer le jeu et penser à sélectionner un unique nombre de questions." );
+            return 0;
+        }
         do {
-
+                alreadyAsk = false;
                 int r = Random();
                 String aff = RandomChoice(quest, r); // Question affichée
                 String answer = RandomChoice(ans , r); //La bonne réponse
-                System.out.println( aff );
-                userAns = scan.nextLine();
-                    if(userAns == answer){ // Comparer les String caractère par caractère avec comparaison de tailles et accents. 
-                        score = score +1;
-                        System.out.println( "c'est bon" );
+                for(int i=0;i<already.size();i++){
+                    if(already.get(i) == aff){
+                        alreadyAsk = true;
+                    }
+                    if(alreadyAsk == true){
+                        aff = RandomChoice(quest, r);
+                        i=0;
 
                     }
-                    else{
-                        score = score;
-                        System.out.println( "C'est pas bon" );
-                        //afficher la bonne réponse
-                        
+                
+                }
+            already.add(aff);
 
-                    }
-                    System.out.println( "Score: " + score );
-                    System.out.println( "Question : "  + cpt );
-                    System.out.println( "Bonne réponse :" + answer  +".");
-                    System.out.println( "/" + userAns +"/" );
+            System.out.println( "Score: " + score );
+            System.out.println( "Question : "  + cpt );
+            System.out.println( "Bonne réponse :" + answer  +".");
             cpt=cpt+1;
 
         }
