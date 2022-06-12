@@ -455,6 +455,8 @@ public class Test {
                     else{
                         score = score;
                         System.out.println( "C'est pas bon" );
+                        //afficher la bonne réponse
+                        
 
                     }
                     System.out.println( "Score: " + score );
@@ -475,6 +477,8 @@ public class Test {
     }
 
     //Pour pays à plusieurs choix séparer les choix par des / et le prendre en compte lors de la lecture de la réponse
-    // Lire jusqu'à / et recommencer jusqu'à fin de la case i. 
+    // Lire jusqu'à / et recommencer jusqu'à fin de la case i 
 }
+
+
 

@@ -4,10 +4,10 @@ import java.awt.*;
 
 public class Validate  implements ActionListener{
     private Windows f;
-    public JPanel secondPage;
-    public JLabel quest,time,score;
+    public JPanel secondPage, listPage;
+    public JLabel quest,time,score,lcontries,lcapitals;
     public JTextField ans;
-    public JButton validate; //si on ne peut pas validé avec une touche 
+    public JButton validate, letsgo; //si on ne peut pas validé avec une touche 
 
 
     public Validate(Windows cb){
@@ -21,6 +21,7 @@ public class Validate  implements ActionListener{
         System.out.println( "test" );
 
         int a = f.WhichChoice(f.cap, f.coun, f.list,f.rules, f.warning);
+        int nbquestVERIF = f.NumberQuestions(f.ten, f.twenty, f.fifty, f.hundred, f.all);
         switch(a){
             case 1:
             //#############################################Interface questions##################################################################
@@ -42,14 +43,40 @@ public class Validate  implements ActionListener{
             secondPage.add(center, BorderLayout.CENTER); //Amélioration possible sur la beauté du truc.
             secondPage.add(down, BorderLayout.SOUTH);
             f.add(secondPage);
+            System.out.println( nbquestVERIF );
             //####################################################################################################################################
             
             //Panel avec les questions qui sont les pays et réponses capitales PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
             break;
             case 2:
+            f.getContentPane().removeAll();
+            secondPage =  new JPanel();
+            time = new JLabel("Time: ");
+            score = new JLabel("Score :");
+            quest = new JLabel("...");
+            ans = new JTextField();
+            JPanel down2 = new JPanel();
+            down2.setLayout(new GridLayout(1,2,200,0));
+            down2.add(time);
+            down2.add(score);
+            JPanel center2 = new JPanel();
+            center2.setLayout(new GridLayout(2,1,0,200));
+            center2.add(quest);
+            center2.add(ans);
+            secondPage.setLayout(new BorderLayout());
+            secondPage.add(center2, BorderLayout.CENTER); //Amélioration possible sur la beauté du truc.
+            secondPage.add(down2, BorderLayout.SOUTH);
+            f.add(secondPage);
+            System.out.println( nbquestVERIF );
             //Panel avec les questions qui sont les capitales et réponses pays  PRENDRE EN COMPTE LE NOMBRE DE QUESTIONS
             break;
             case 3:
+            f.getContentPane().removeAll();
+            listPage = new JPanel();
+            letsgo = new JButton("Let's go !");
+            lcontries = new JLabel();//y mettre la liste des pays. 
+
+            
             //Panel qui affiche la liste des pays et leurs capitales sur le côtés.
             break; 
             case 4:

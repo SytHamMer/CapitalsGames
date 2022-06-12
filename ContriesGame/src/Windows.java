@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.time.chrono.JapaneseChronology;
 import java.util.Random;
 
 public class Windows extends JFrame {
@@ -73,14 +74,37 @@ public class Windows extends JFrame {
         ans = 4;
         warning.setText("");
        }
-       if(ans == 0){
-          warning.setText("Veuillez selectionner qu'une seule case.");
+       if(ans == 0 ){
+            warning.setText("Veuillez selectionner qu'une seule case. "); 
        }
        System.out.println( ans );
        return ans;
     }
 
+    public int NumberQuestions(JCheckBox ten, JCheckBox twenty, JCheckBox fifty, JCheckBox hundred, JCheckBox all){
+        int ans = 0;
+        if(ten.isSelected() && all.isSelected()== false && hundred.isSelected() == false && fifty.isSelected() == false && twenty.isSelected() == false ){
+            ans = 10;
+        }
+        if(twenty.isSelected() && all.isSelected()== false && hundred.isSelected() == false && fifty.isSelected() == false && ten.isSelected() == false ){
+            ans = 20;
+        }
+        if(fifty.isSelected() && all.isSelected()== false && hundred.isSelected() == false && ten.isSelected() == false && twenty.isSelected() == false ){
+            ans = 50;
+        }
 
+        if(hundred.isSelected() && all.isSelected()== false && ten.isSelected() == false && fifty.isSelected() == false && twenty.isSelected() == false ){
+            ans = 100;
+        }
+        if(all.isSelected() && ten.isSelected()== false && hundred.isSelected() == false && fifty.isSelected() == false && twenty.isSelected() == false ){
+            ans = 195; // à modifier si nécessaire
+        }
+
+        System.out.println(  ans  );
+        return ans;
+    }
+
+//ten,twenty,fifty,hundred,all
 
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");

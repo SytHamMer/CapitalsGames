@@ -1,52 +1,56 @@
-Afghanistan	
-Afrique du Sud	
-Albanie	
-Algérie	
-Allemagne	
-Andorre	
-Angola	
-Antigua-et-Barbuda	
-Arabie Saoudite	
-Argentine	
-Arménie	
-Australie	
-Autriche	
-Azerbaïdjan	
-Bahamas	
-Bahreïn	
-Bangladesh	
-Barbade	
-Belgique	
-Belize	
-Bénin	
-Bhoutan	
-Biélorussie	
-Birmanie	
+Afghanistan
+Afrique du Sud
+Albanie
+Algérie
+Allemagne
+Andorre
+Angola
+Antigua-et-Barbuda
+Arabie Saoudite
+Argentine
+Arménie
+Australie
+Autriche
+Azerbaïdjan
+Bahamas
+Bahreïn
+Bangladesh
+Barbade
+Belgique
+Belize
+Bénin
+Bhoutan
+Biélorussie
+Birmanie
 Bolivie
-Bosnie-Herzégovine	
+Bosnie-Herzégovine
 Botswana
-Brésil	
-Brunei	
+Brésil
+Brunei
 Bulgarie
 Burkina Faso
-Burundi	Bujumbura
-Cambodge	
-Cameroun	
-Canada	
-Cap-Vert	
+Burundi
+Cambodge
+Cameroun
+Canada
+Cap-Vert
+République Centrafricaine
 Chili
-Chine	
-Chypre	
+Chine
+Chypre
 Colombie
 Comores
-Congo
+République du Congo
+République Démocratique du Congo
+Îles Cook
 Corée du Nord
 Corée du Sud
 Costa Rica
 Côte d'Ivoire
-Croatie
+Croatie 
 Cuba
 Danemark
+République Dominicaine
 Djibouti
 Dominique
 Egypte
@@ -57,10 +61,10 @@ Espagne
 Estonie
 Eswatini
 Etats-Unis
-Ethiopie	
-Fidji	
+Ethiopie
+Fidji
 Finlande
-France	
+France
 Gabon
 Gambie
 Géorgie
@@ -69,48 +73,47 @@ Grèce
 Grenade
 Guatemala
 Guinée
-Guinée équatoriale	
+Guinée équatoriale
 Guinée-Bissau
-Guyana	
-Haïti	
+Guyana
+Haïti
 Honduras
 Hongrie
-Île Maurice	
-Inde	
-Indonésie	
-Irak	
-Iran	
-Irlande	
-Islande	
-Israël	
-Italie	
-Jamaïque	
-Japon	
+Inde
+Indonésie
+Irak
+Iran
+Irlande
+Islande
+Israël
+Italie
+Jamaïque
+Japon
 Jordanie
 Kazakhstan
 Kenya
-Kirghizistan	
-Kiribati	
-Kosovo	
-Koweït	
-Laos	
-Lesotho	
+Kirghizistan
+Kiribati
+Koweït
+Laos
+Lesotho
 Lettonie
 Liban
-Liberia	
+Liberia
 Libye
-Liechtenstein	
+Liechtenstein
 Lituanie
-Luxembourg	
+Luxembourg
 Macédoine du Nord
-Madagascar	
+Madagascar
 Malaisie
 Malawi
 Maldive
 Mali
 Malte
 Maroc
-Marshall	
+Marshall
+Île Maurice
 Mauritanie
 Mexique
 Micronésie
@@ -142,15 +145,11 @@ Philippines
 Pologne
 Portugal
 Qatar
-République Centrafricaine
-République Démocratique du Congo
-République Dominicaine
-République Tchèque
 Roumanie
 Royaume-Uni
 Russie
 Rwanda
-Saint-Kitts-et-Nevis
+Saint-Christophe-et-Niévès
 Saint-Marin
 Saint-Vincent-et-les-Grenadines
 Sainte-Lucie
@@ -162,7 +161,7 @@ Sénégal
 Serbie
 Seychelles
 Sierra Leone
-Singapour	
+Singapour
 Slovaquie
 Slovénie
 Somalie
@@ -171,27 +170,27 @@ Soudan du Sud
 Sri Lanka
 Suède
 Suisse
-Suriname	
+Suriname
 Syrie
 Tadjikistan
-Taïwan
 Tanzanie
 Tchad
+République Tchèque
 Thaïlande
 Timor-Oriental
 Togo
 Tonga
-Trinité-et-Tobago	
-Tunisie	
+Trinité-et-Tobago
+Tunisie
 Turkménistan
 Turquie
-Tuvalu	
-Ukraine	
-Uruguay	
-Vanuatu	
+Tuvalu
+Ukraine
+Uruguay
+Vanuatu
 Vatican
-Venezuela	
-Viêt Nam	
-Yémen	
-Zambie	
-Zimbabwe	
+Venezuela
+Viêt Nam
+Yémen
+Zambie
+Zimbabwe
